@@ -9,7 +9,8 @@ const listing = {
     "Продаю свой MacBook Pro 16\" (2021) на чипе M1 Pro. Состояние отличное, работал бережно.",
   category: "Электроника",
   needsImprovement: true,
-};
+}
+
 
 export const ListingViewPage = () => {
   const { id } = useParams();
@@ -89,6 +90,12 @@ export const ListingViewPage = () => {
         <h3>Описание</h3>
         <p>{listing.description}</p>
       </div>
+        <Button
+        style={{ marginTop: 30 }}
+        onClick={() => navigate("/")}
+      >
+        Назад к списку
+      </Button>
     </div>
   );
 };

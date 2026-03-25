@@ -63,12 +63,12 @@ const sortedListings = [...filteredListings].sort((a, b) => {
     <div style={{  paddingTop: 0, padding:32 }}>
       <div style={{ marginBottom: 20 }}>
         <div style={{ paddingLeft:12 }}>
-  <h1 style={{ fontSize: 28 }}>Мои объявления </h1><h2 style={{color: 'Gray', fontSize:20}}>{listings.length} объявления</h2>
+  <h1 style={{ fontSize: 28 }}>Мои объявления </h1><h2 style={{color: 'Gray', fontSize:20}}>{listings.length} объявлений</h2>
   </div>
   <div style={{ display: "flex", gap: 10, backgroundColor:"#FFFFFF"}}>
     <div style = {{paddingLeft:10,display: "flex", alignItems: "center", width: 1335, height:56,backgroundColor:"#FFFFFF"}}>
     <Input
-      style={{ width: 958, height:32, backgroundColor:"#F7F5F8" }}
+      style={{ width: 1000, height:32, backgroundColor:"#F7F5F8" }}
       placeholder="Найти объявление..."
       value={search}
       onChange={(e) => setSearch(e.target.value)}
@@ -156,9 +156,7 @@ const sortedListings = [...filteredListings].sort((a, b) => {
   onClick={() => navigate(`/listing/${item.id}`)}
   style={{
     width: "100%",
-    border: checkNeedsImprovement(item)
-      ? "1px solid orange"
-      : undefined,
+    
   }}
   bodyStyle={{ padding: 12 }}
 >
@@ -192,7 +190,7 @@ const sortedListings = [...filteredListings].sort((a, b) => {
 
     
     {checkNeedsImprovement(item) && (
-      <p style={{ color: "orange", fontSize: 12 }}>
+      <p style={{ color: "orange", fontSize: 12, backgroundColor:"#F9F1E6" }}>
         Требует доработок
       </p>
     )}
@@ -201,7 +199,7 @@ const sortedListings = [...filteredListings].sort((a, b) => {
       </div>
       
     </div>
-    <div style={{ marginTop: 20, paddingLeft:280 }}>
+    <div style={{ marginTop: 10, paddingLeft:300 }}>
   <Pagination
     current={page}
     pageSize={pageSize}
@@ -230,6 +228,9 @@ const listings = [
     title: "MacBook Pro 16",
     price: 64000,
     category: "Электроника",
+    description: "Продам",
+    color: "Черный", 
+    condition: "Новое",
     
   },
   {
@@ -258,6 +259,9 @@ const listings = [
     title: "MAJOR VI",
     price: 20000,
     category: "Электроника",
+    description: "Продам",
+    color: "Черный", 
+    condition: "Новое",
     
   },
   {
@@ -279,6 +283,9 @@ const listings = [
     title: "Студия 25м²",
     price: 15000000,
     category: "Недвижимость",
+    description: "Продам",
+    color: "Черный", 
+    condition: "Новое",
     
   },
   {
@@ -286,6 +293,9 @@ const listings = [
     title: "1-кк, 44м2",
     price: 19000000,
     category: "Недвижимость",
+    description: "Продам",
+    color: "Черный", 
+    condition: "Новое",
     
   },
   {
@@ -293,6 +303,9 @@ const listings = [
     title: "MAJOR VI",
     price: 20000,
     category: "Электроника",
+    description: "Продам",
+    color: "Черный", 
+    condition: "Новое",
     
   },
   {
@@ -307,6 +320,9 @@ const listings = [
     title: "Volkswagen Polo",
     price: 1100000,
     category: "Авто",
+    description: "Продам",
+    color: "Черный", 
+    condition: "Новое",
     
   },
   {
@@ -321,6 +337,9 @@ const listings = [
     title: "1-кк, 44м2",
     price: 19000000,
     category: "Недвижимость",
+    description: "Продам",
+    color: "Черный", 
+    condition: "Новое",
     
   },
   {
@@ -328,6 +347,9 @@ const listings = [
     title: "MAJOR VI",
     price: 20000,
     category: "Электроника",
+    description: "Продам",
+    color: "Черный", 
+    condition: "Новое",
     
   },
   
